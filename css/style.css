@@ -1,0 +1,59 @@
+/* reseta padrões do navegador */
+
+body,
+p,
+h1,
+ul,
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Vollkorn", Georgia serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100px;
+}
+
+/* Grid Geral */
+
+.estrutura {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px; /* minmax = tamanho mínimo e máximo da coluna no responsivo */
+  grid-template-areas:
+    "header header header"
+    "sidenav content anuncios"
+    "footer footer footer";
+}
+
+/* para o grid-template-areas funcionar, deve se atribuir cada item as respectivas classes */
+
+.header {
+  grid-area: header;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.content {
+  grid-area: content;
+}
+
+.anuncios {
+  grid-area: anuncios;
+}
+
+.footer {
+  grid-area: footer;
+}
